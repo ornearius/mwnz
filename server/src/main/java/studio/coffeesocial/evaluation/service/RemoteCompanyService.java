@@ -3,9 +3,10 @@ package studio.coffeesocial.evaluation.service;
 import org.springframework.stereotype.Service;
 import studio.coffeesocial.openapi.model.Company;
 
-public class RemoteCompanyService {
+@Service
+public class RemoteCompanyService implements CompanyService{
 
-    protected Company getCompany(Integer id) {
+    public Company getCompany(Integer id) {
         return new Company().id(id);
     }
 }

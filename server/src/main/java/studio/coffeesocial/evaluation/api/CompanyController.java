@@ -1,6 +1,7 @@
 package studio.coffeesocial.evaluation.api;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 import studio.coffeesocial.evaluation.service.CompanyService;
@@ -13,7 +14,12 @@ import java.math.BigDecimal;
 @Slf4j
 public class CompanyController implements CompaniesApi {
 
-    private CompanyService remoteCompanyService;
+    private final CompanyService companyService;
+
+    @Autowired
+    public CompanyController(CompanyService companyService) {
+        this.companyService = companyService;
+    }
 
     public ResponseEntity<Company> companiesIdGet(BigDecimal id){
         return null;
