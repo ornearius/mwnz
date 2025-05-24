@@ -50,6 +50,13 @@
 		</dependency>
 
 		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.38</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
@@ -79,7 +86,7 @@
 							<apiPackage>studio.coffeesocial.openapi.api</apiPackage>
 							<modelPackage>studio.coffeesocial.openapi.model</modelPackage>
 							<configOptions>
-								<delegatePattern>true</delegatePattern>
+								<interfaceOnly>true</interfaceOnly>
 								<useSpringBoot3>true</useSpringBoot3>
 							</configOptions>
 						</configuration>
