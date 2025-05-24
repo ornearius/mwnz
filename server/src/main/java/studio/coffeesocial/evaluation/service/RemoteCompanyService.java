@@ -7,6 +7,6 @@ import studio.coffeesocial.openapi.model.Company;
 public class RemoteCompanyService implements CompanyService{
 
     public Company getCompany(Integer id) {
-        return new Company().id(id);
+        return new Company().id(id).name("test").description("123");
     }
 }

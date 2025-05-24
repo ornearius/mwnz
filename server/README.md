@@ -23,7 +23,30 @@ Steps
 < Content-Length: 0
 < Date: Sat, 24 May 2025 05:22:18 GMT
 < 
-
 ```
 
-&#9746; Implement custom response
+&#9745; Implement hardcoded response
+```shell
+❯ curl -H "Accept: application/json" http://localhost:8080/companies/1 -v
+*   Trying 127.0.0.1:8080...
+* Connected to localhost (127.0.0.1) port 8080 (#0)
+> GET /companies/1 HTTP/1.1
+> Host: localhost:8080
+> User-Agent: curl/7.81.0
+> Accept: application/json
+> 
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< Content-Type: application/json
+< Transfer-Encoding: chunked
+< Date: Sat, 24 May 2025 05:36:26 GMT
+< 
+* Connection #0 to host localhost left intact
+{"id":1,"name":null,"description":null}
+```
+&#9745; Implement service response
+```shell
+❯ curl -H "Accept: application/json" http://localhost:8080/companies/2 
+{"id":2,"name":"test","description":"123"}
+```
+
